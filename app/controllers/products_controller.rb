@@ -1,12 +1,10 @@
 class ProductsController < ApplicationController
-
+  helper_method :cart
   def index
-    @cart = cart
   end
 
   def add
     cart << params[:product]
-    @cart = cart
     render :index
   end
 
